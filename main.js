@@ -21,6 +21,10 @@ let cancel = document.getElementById("cancel");
 generate.addEventListener("click",
     function() {
 
+        if (passengerName.value == "" || kmNumber.value == "" || passengerAge.value == "scegli") {
+            alert("Si prega di inserire tutti i dati richiesti.")
+        } else {
+
         ticketActive.classList.remove("d-none");
         ticketActive.classList.add("active");
 
@@ -48,6 +52,8 @@ generate.addEventListener("click",
 
         let codePR = Math.floor(Math.random() * (99999 - 90000 + 1) + 90000);
         ticketCode.innerHTML = codePR;
+
+        }
     }
 )
 
@@ -58,4 +64,3 @@ cancel.addEventListener ("click",
         passengerAge.value = "";
     }
 )
-

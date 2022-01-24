@@ -21,10 +21,42 @@
     display: none;
 }
 
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input, option, select {
+    text-align: center;
+    border-color: #b91450;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+input:focus, select:focus {
+    background-color: #b91450;
+    border-color: orangered;
+}
+
+button {
+    padding: 10px;
+    font-size: 20px;
+    color: #b91450;
+    margin: 0 20px;
+}
+
+button:hover {
+    border-color: orangered;
+    cursor: pointer;
+}
+
 .flex-col {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
 }
 
 .ticket-info, .ticket-buttons {
@@ -35,6 +67,10 @@
     justify-content: space-around;
 }
 
+.ticket-details p {
+    font-weight: bold;
+}
+
 body {
     background-color: #b91450;
 }
@@ -42,6 +78,10 @@ body {
 h1 {
     text-align: center;
     color: white;
+}
+
+h2 {
+    padding: 10px;
 }
 
 label {
@@ -55,7 +95,7 @@ label {
     padding: 5%;
 }
 
-.ticket-in {
+#ticket-in {
     background-color: white;
 }
 
