@@ -11,12 +11,18 @@ let passengerAge = document.getElementById("input-age");
 
 let ticketOffer = document.getElementById("psg-offer");
 
+let ticketActive = document.getElementById("ticket-in");
+
 const pricePerKM = 0.21;
 
 let generate = document.getElementById("generate");
+let cancel = document.getElementById("cancel");
 
 generate.addEventListener("click",
     function() {
+
+        ticketActive.classList.remove("d-none");
+        ticketActive.classList.add("active");
 
         ticketName.innerHTML = passengerName.value;
 
@@ -44,3 +50,12 @@ generate.addEventListener("click",
         ticketCode.innerHTML = codePR;
     }
 )
+
+cancel.addEventListener ("click",
+    function() {
+        passengerName.value = "";
+        kmNumber.value = "";
+        passengerAge.value = "";
+    }
+)
+
