@@ -7,6 +7,10 @@ let ticketPrice = document.getElementById("psg-price");
 let ticketSeat = document.getElementById("psg-seat");
 let ticketCode = document.getElementById("psg-code");
 
+let passengerAge = document.getElementById("input-age");
+
+let ticketOffer = document.getElementById("psg-offer");
+
 const pricePerKM = 0.21;
 
 let generate = document.getElementById("generate");
@@ -16,8 +20,22 @@ generate.addEventListener("click",
 
         ticketName.innerHTML = passengerName.value;
 
-        let totalPrice = (kmNumber.value * pricePerKM);
-        ticketPrice.innerHTML = totalPrice.toFixed(2) + "€";
+        if (passengerAge.value == "minorenne") {
+            let basePrice = kmNumber.value * pricePerKM;
+            let discountPrice = ((kmNumber.value * pricePerKM) * 20) / 100;
+            ticketPrice.innerHTML = (basePrice - discountPrice).toFixed(2) + "€";
+            ticketOffer.innerHTML = "Sconto 20% minorenni";
+        } else if (passengerAge.value == "over-65") {
+            let basePrice = kmNumber.value * pricePerKM;
+            let discountPrice = ((kmNumber.value * pricePerKM) * 40) / 100;
+            ticketPrice.innerHTML = (basePrice - discountPrice).toFixed(2) + "€";
+            ticketOffer.innerHTML = "Sconto 40% Over 65";
+        }
+        else {
+            let basePrice = kmNumber.value * pricePerKM;
+            ticketPrice.innerHTML = basePrice.toFixed(2) + "€";
+            ticketOffer.innerHTML = "Tariffa standard";
+        }
 
         let carNumber = Math.floor(Math.random() * 9) + 1;
         ticketSeat.innerHTML = carNumber;

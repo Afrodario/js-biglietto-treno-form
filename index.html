@@ -18,13 +18,13 @@
             <label for="km">Km da percorrere</label>
             <input type="number" id="input-km">
             <label for="età">Fascia d'età</label>
-            <select>
+            <select id="input-age">
                 <option value="minorenne">Minorenne</option>
                 <option value="maggiorenne">Maggiorenne</option>
                 <option value="over-65">Over 65</option>
             </select>
             <button type="button" id="generate">Genera</button>
-            <button>Annulla</button>
+            <button type="button">Annulla</button>
         </form>
 
         <div id="ticket-main">
@@ -42,6 +42,7 @@
 
                     <div class="ticket-offer">
                         <p>Offerta</p>
+                        <span id="psg-offer"></span>
                     </div>
 
                     <div class="ticket-seat">
