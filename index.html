@@ -16,7 +16,7 @@
             <label for="nome-cognome">Nome Cognome</label>
             <input type="text" id="input-name">
             <label for="km">Km da percorrere</label>
-            <input type="number">
+            <input type="number" id="input-km">
             <label for="età">Fascia d'età</label>
             <select>
                 <option value="minorenne">Minorenne</option>
@@ -37,7 +37,7 @@
 
                     <div class="ticket-name">
                         <h2>NOME PASSEGGERO</h2>
-                        <span id="psg-name">Mostrami</span>
+                        <span id="psg-name"></span>
                     </div>
 
                     <div class="ticket-offer">
@@ -46,14 +46,17 @@
 
                     <div class="ticket-seat">
                         <p>Carrozza</p>
+                        <span id="psg-seat"></span>
                     </div>
 
                     <div class="ticket-code">
                         <p>Codice CP</p>
+                        <span id="psg-code"></span>
                     </div>
 
                     <div class="ticket-price">
                         <p>Costo biglietto</p>
+                        <span id="psg-price"></span>
                     </div>
                 </div>
             </div>
