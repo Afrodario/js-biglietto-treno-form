@@ -14,7 +14,7 @@
 
         <form>
             <label for="nome-cognome">Nome Cognome</label>
-            <input type="text">
+            <input type="text" id="input-name">
             <label for="km">Km da percorrere</label>
             <input type="number">
             <label for="età">Fascia d'età</label>
@@ -23,7 +23,7 @@
                 <option value="maggiorenne">Maggiorenne</option>
                 <option value="over-65">Over 65</option>
             </select>
-            <button>Genera</button>
+            <button type="button" id="generate">Genera</button>
             <button>Annulla</button>
         </form>
 
@@ -37,7 +37,7 @@
 
                     <div class="ticket-name">
                         <h2>NOME PASSEGGERO</h2>
-                        <span></span>
+                        <span id="psg-name">Mostrami</span>
                     </div>
 
                     <div class="ticket-offer">
